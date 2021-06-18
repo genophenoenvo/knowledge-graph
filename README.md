@@ -7,7 +7,8 @@ The method and code for creating it is in https://github.com/diatomsRcool/eco-kg
 To (re)run this model from a terminal:
 
 ```
-# check Python version -- tested on 3.8.5
+# check Python version -- tested on v3.8.5
+python --version
 
 # install requirements
 pip install git+https://github.com/OntoGene/OGER.git pyyaml kgx
