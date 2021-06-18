@@ -7,17 +7,20 @@ The method and code for creating it is in https://github.com/diatomsRcool/eco-kg
 To (re)run this model from a terminal:
 
 ```
+# install requirements
+pip install git+https://github.com/OntoGene/OGER.git pyyaml kgx
+
 # clone eco-kg repo
 git clone https://github.com/diatomsRcool/eco-kg
 
 # change directory
 cd eco-kg
 
-# install OntoGene/OGER requirements
-pip install git+https://github.com/OntoGene/OGER.git
+# copy data
+mkdir data
 
 # run model
-python run.py merge merge.yml
+python run.py merge
 ```
 
 Documentation about the KGX `tsv` file format can be found [here](https://github.com/biolink/kgx/blob/master/specification/kgx-format.md).
