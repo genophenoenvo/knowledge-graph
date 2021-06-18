@@ -18,6 +18,8 @@ cd eco-kg
 
 # copy data
 mkdir data
+cd data
+python run.py download
 
 # run model
 python run.py merge
