@@ -4,6 +4,16 @@ This is a place to share the knowledge graph for this project.
 
 The method and code for creating it is in https://github.com/diatomsRcool/eco-kg and will be iteratively updated over time.
 
+To (re)run this model from a terminal:
+
+```
+git clone https://github.com/diatomsRcool/eco-kg
+
+cd eco-kg
+
+python run.py merge merge.yml
+```
+
 Documentation about the KGX `tsv` file format can be found [here](https://github.com/biolink/kgx/blob/master/specification/kgx-format.md).
 
 |tsv files|
