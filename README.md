@@ -13,8 +13,8 @@ git clone https://github.com/diatomsRcool/eco-kg
 # change directory
 cd eco-kg
 
-# install requirements
-conda install requirements.txt
+# install OntoGene/OGER requirements
+pip install git+https://github.com/OntoGene/OGER.git
 
 # run model
 python run.py merge merge.yml
