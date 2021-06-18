@@ -7,10 +7,16 @@ The method and code for creating it is in https://github.com/diatomsRcool/eco-kg
 To (re)run this model from a terminal:
 
 ```
+# clone eco-kg repo
 git clone https://github.com/diatomsRcool/eco-kg
 
+# change directory
 cd eco-kg
 
+# install requirements
+conda install requirements.txt
+
+# run model
 python run.py merge merge.yml
 ```
 
