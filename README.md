@@ -36,4 +36,6 @@ Documentation about the KGX `tsv` file format can be found [here](https://github
 
 Both files can be downloaded [here](https://www.dropbox.com/s/utavv8n5dxr32vr/merged-kg.tar.gz?dl=0) as compressed 44 MB `tar.gz` tarball. 
 
+The screenshot shows some helfpul statistics about the number of nodes and edges added from each resource.
+
 The final merge statistics can be found at https://github.com/diatomsRcool/eco-kg/blob/master/merged-kg_stats.yaml
