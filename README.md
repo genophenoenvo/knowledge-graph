@@ -7,24 +7,40 @@ The method and code for creating it is in https://github.com/diatomsRcool/eco-kg
 To (re)run this model from a terminal:
 
 ```
+# create Conda environment
+
+$ conda env create -f environment.yml
+
+$ conda activate genophenoenvo
+
+# if already created, update it
+
+$ conda env update -f environment.yml
+
 # check Python version -- tested on v3.8.5
-python --version
+
+$ python --version
 
 # install requirements
-pip install git+https://github.com/OntoGene/OGER.git pyyaml kgx
+
+$ pip install git+https://github.com/OntoGene/OGER.git pyyaml kgx
 
 # clone eco-kg repo
-git clone https://github.com/diatomsRcool/eco-kg
+
+$ git clone https://github.com/diatomsRcool/eco-kg
 
 # change directory
-cd eco-kg
+
+$ cd eco-kg
 
 # copy data
-mkdir data
-python run.py download
+
+$ mkdir data
+$ python run.py download
 
 # run model
-python run.py merge
+
+$python run.py merge
 ```
 
 Documentation about the KGX `tsv` file format can be found [here](https://github.com/biolink/kgx/blob/master/specification/kgx-format.md).
