@@ -1,0 +1,81 @@
+# Sourced from: https://github.com/biolink/kgx/tree/master/examples
+---
+configuration:
+  output_directory: data/merged
+  checkpoint: false
+
+merged_graph:
+  name: Eco-KG Graph
+  source:
+    planteome:
+      input:
+        name: "planteome"
+        format: tsv
+        filename:
+        - data/transformed/Planteome/nodes.tsv
+        - data/transformed/Planteome/edges.tsv
+    eoltraitbank:
+      input:
+        name: "EOLTraitBank"
+        format: tsv
+        filename:
+        - data/transformed/EOLTraitBank/nodes.tsv
+        - data/transformed/EOLTraitBank/edges.tsv
+    geneexpressionatlas:
+      input:
+        name: "Gene Expression Atlas"
+        format: tsv
+        filename:
+        - data/transformed/Gene Expression Atlas/nodes.tsv
+        - data/transformed/Gene Expression Atlas/edges.tsv
+    ncbi-ontology:
+      input:
+        name: "NCBISlim Ontology"
+        format: tsv
+        filename:
+        - data/transformed/ontologies/taxslim_nodes.tsv
+        - data/transformed/ontologies/taxslim_edges.tsv
+    go-ontology:
+      input:
+        name: "Gene Ontology"
+        format: tsv
+        filename:
+        - data/transformed/ontologies/go-basic_nodes.tsv
+        - data/transformed/ontologies/go-basic_edges.tsv
+    to-ontology:
+      input:
+        name: "Plant Trait Ontology"
+        format: tsv
+        filename:
+        - data/transformed/ontologies/to_nodes.tsv
+        - data/transformed/ontologies/to_edges.tsv
+    po-ontology:
+      input:
+        name: "Plant Ontology"
+        format: tsv
+        filename:
+        - data/transformed/ontologies/po_nodes.tsv
+        - data/transformed/ontologies/po_edges.tsv
+  operations:
+    - name: kgx.graph_operations.summarize_graph.generate_graph_stats
+      args:
+        graph_name: Merged Graph
+        filename: merged-kg_stats.yaml
+        node_facet_properties:
+        edge_facet_properties:
+  destination:
+    merged-kg-tsv:
+      format: tsv
+      compression: tar.gz
+      filename:
+        - merged-kg
+#    merged-kg-nt:
+#      format: nt
+#      compression: gz
+#      filename:
+#        - merged-kg.nt.gz
+#    merged-kg-neo4j:
+#      format: neo4j
+#      uri: http://localhost:7474
+#      username: neo4j
+#      password: admin
