@@ -1,11 +1,11 @@
 name: genophenoenvo
 channels:
   - conda-forge
-  - defaults
 dependencies:
+  - click
   - python=3.8.5
   - pip
-#  - pip:
-#    - pyyaml 
-#    - kgx
-#    - kghub-downloader
+  - pip:
+     - pyyaml 
+     - kgx
+     - kghub-downloader

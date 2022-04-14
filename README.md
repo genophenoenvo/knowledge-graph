@@ -2,14 +2,30 @@
 
 This is a place to share the knowledge graph for this project.
 
-The method and code for creating it is in https://github.com/diatomsRcool/eco-kg and will be iteratively updated over time.
+The method and code for creating the Knowledge Graph are originally from https://github.com/diatomsRcool/eco-kg.
+
+For this repository we have made minor changes
+
+They will be iteratively updated over time.
+
+## Installation
+
+First, clone this repository to the location wou want to run the program.
 
 To (re)run this model from a terminal:
 
 ```
-# create Conda environment
+$ git clone https://github.com/genophenoenvo/knowledge-graph
 
-$ conda env create -f environment.yml
+$ cd knowledgege-graph
+```
+
+Next, create an environment for running the graph using `conda` or `mamba`
+
+```
+# create a Conda environment using the provided environment.yml
+
+$ mamba env create -f environment.yml
 
 $ conda activate genophenoenvo
 
@@ -20,27 +36,30 @@ $ conda env update -f environment.yml
 # check Python version -- tested on v3.8.5
 
 $ python --version
+```
 
-# install requirements
+After the environment has been tested, 
 
-$ pip install git+https://github.com/OntoGene/OGER.git pyyaml kgx
-
-# clone eco-kg repo
-
-$ git clone https://github.com/diatomsRcool/eco-kg
-
+```
 # change directory
 
-$ cd eco-kg
+$ cd knowledgege-graph
 
-# copy data
+# Create a data directory and pull the compressed tsv files
 
-$ mkdir data
+$ mkdir -p data/merged
+
+$ wget https://www.dropbox.com/s/utavv8n5dxr32vr/merged-kg.tar.gz data/merged/
+
+# run download on the rest of the datasets
 $ python run.py download
 
+# run transform
+
+$ python run.py transform
 # run model
 
-$python run.py merge
+$ python run.py merge
 ```
 
 Documentation about the KGX `tsv` file format can be found [here](https://github.com/biolink/kgx/blob/master/specification/kgx-format.md).

@@ -851,6 +851,9 @@
   url: http://purl.obolibrary.org/obo/po.owl
   local_name: po.owl
 -
+  url: https://data.cyverse.org/dav-anon/iplant/projects/genophenoenvo/kg/po.json
+  local_name: po.json
+-
   url: http://purl.obolibrary.org/obo/go/go-basic.json
   local_name: go-basic.json
 -
