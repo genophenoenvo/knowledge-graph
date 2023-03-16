@@ -19,3 +19,5 @@ tests/resources/traits/
 .ipynb_checkpoints
 .ipynb
 
+oryx-build-commands.txt
+server_id
